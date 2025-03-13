@@ -18,9 +18,11 @@
         <Button variant="outline" class="text-xs uppercase">Wish</Button>
         <span class="relative -top-4 -left-1 text-red-500">0</span>
       </RouterLink>
-      <Button>
-        Login
-      </Button>
+      <RouterLink to="auth">
+        <Button>
+          Login
+        </Button>
+      </RouterLink>
     </div>
   </div>
 </template>
