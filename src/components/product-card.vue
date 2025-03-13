@@ -8,7 +8,7 @@
           <div class="flex justify-between items-center">
             <p class="text-red-500">{{ product_data.price }} $</p>
             <Button size="icon" variant="ghost">
-              <ShoppingCart  color="black" :size="32"/>
+              <ShoppingCart  color="black" :size="3200"/>
             </Button>
           </div>
         </div>
