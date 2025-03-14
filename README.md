@@ -1,4 +1,4 @@
-# ecommerce_shop
+# It is a small e-commerce web using Typescript and Vue3.
 
 This template should help get you started developing with Vue 3 in Vite.
 
