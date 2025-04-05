@@ -1,9 +1,14 @@
 <template>
   <div>
-    <Router/>
+    <Navbar />
+    <div class="h-[100vh] p-4">
+      <router-view></router-view>
+    </div>
+    <Footer />
   </div>
 </template>
 
 <script setup lang="ts">
-import Router from "@/router/router.vue";
+import Navbar from "@/components/Navbar.vue";
+import Footer from "@/components/Footer.vue";
 </script>
