@@ -1,21 +1,27 @@
 <template>
   <div>
-    <Input type="text" v-model="data_search" placeholder="Search..."/>
+    <Input type="text" v-model="data_search" placeholder="Search..." />
   </div>
 </template>
 
 <script setup lang="ts">
-import {Input} from "@/components/ui/input/index.js";
-import {ref, watch} from "vue";
+import { Input } from "@/components/ui/input/index.js";
+import { ref, watch } from "vue";
+import { useRouter, useRoute } from "vue-router";
 
-const data_search = ref<string>('');
+const router = useRouter();
+const route = useRoute();
+
+const data_search = ref<string>("");
 
 function search() {
-  console.log(data_search.value);
+  router.push({
+    path: router.currentRoute.value.fullPath,
+    query: { search_data: data_search.value },
+  });
 }
 
 watch(data_search, (new_val) => {
   search();
 });
-
 </script>

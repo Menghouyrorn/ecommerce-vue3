@@ -19,12 +19,7 @@
 </template>
 
 <script setup lang="ts">
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card/index.js";
+import { Card, CardContent } from "@/components/ui/card/index.js";
 import { Button } from "@/components/ui/button/index.js";
 import { ShoppingCart } from "lucide-vue-next";
 import { onMounted, ref } from "vue";
