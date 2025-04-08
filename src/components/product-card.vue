@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Card class="w-full rounded h-[290px] flex justify-center">
+    <Card class="w-full rounded h-[290px] flex justify-center cursor-pointer">
       <CardContent>
         <Skeleton class="w-[200px] mt-4 h-[160px]" v-if="isLoading" />
         <img class="w-full" :src="image_product" />
@@ -8,9 +8,16 @@
           <p>{{ product_data.title }}</p>
           <div class="flex justify-between items-center">
             <p class="text-red-500">{{ product_data.price }} $</p>
-            <Button size="icon" variant="ghost">
-              <ShoppingCart color="black" :size="3200" />
-            </Button>
+            <div>
+              <RouterLink :to="`detail/${product_data.id}`">
+                <Button size="icon" variant="ghost">
+                  <Eye color="green" />
+                </Button>
+              </RouterLink>
+              <Button size="icon" variant="ghost">
+                <ShoppingCart color="black" />
+              </Button>
+            </div>
           </div>
         </div>
       </CardContent>
@@ -21,7 +28,7 @@
 <script setup lang="ts">
 import { Card, CardContent } from "@/components/ui/card/index.js";
 import { Button } from "@/components/ui/button/index.js";
-import { ShoppingCart } from "lucide-vue-next";
+import { ShoppingCart, Eye } from "lucide-vue-next";
 import { onMounted, ref } from "vue";
 import Skeleton from "./ui/skeleton/Skeleton.vue";
 
