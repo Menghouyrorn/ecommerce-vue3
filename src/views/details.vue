@@ -18,7 +18,7 @@ import Button from "@/components/ui/button/Button.vue";
 import QtyProduct from "@/components/Qty-Product.vue";
 const route = useRoute();
 let product_qty = ref(1);
-
+console.log(route.fullPath.split("/"));
 function getQty(value: number) {
   product_qty.value = value;
 }

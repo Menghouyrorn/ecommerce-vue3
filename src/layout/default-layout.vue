@@ -5,7 +5,7 @@
       <router-view></router-view>
     </div>
     <div class="z-20">
-      <BackTop class="z-20" />
+      <BackTop />
     </div>
     <Footer />
   </div>
